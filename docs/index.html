@@ -6,23 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Магазин рослин</title>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+<<<<<<< Updated upstream
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- <link rel="stylesheet" media="print" type="text/css" href="styles/print.css" /> -->
 </head>
+=======
+    <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+    <!-- <link rel="stylesheet" media="print" type="text/css" href="styles/print.css" /> -->
+<link href="css/main.css" rel="stylesheet"></head>
+>>>>>>> Stashed changes
 
 <body>
-    <header>
+    <div class="header">
         <div class="header_top">
-            <img src="images/logo2.png" alt="Logo">
+            <img src="../docs/images/logo2.png" alt="Logo">
             <h1 class="logo_name">MAKE YOUR GARDEN</h1>
         </div>
         <div class="header_buttons">
             <div class="menu_icon">
-                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
-                    <g>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-                    </g>
-                </svg>
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                        <g class="style-scope yt-icon">
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon"></path>
+                          </g></svg>
             </div>
             <ul class="menu">
                 <li class="menu_element hover">
@@ -61,121 +66,158 @@
                 </svg>
             </div>
         </div>
-        </div>
+    </div>
 
-        <div class="popup_back">
-            <div class="popup">
-                <div class="basket_main">
-                    <h2>Кошик</h2>
-                    <svg class="basket_close" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M0 18.5C0 8.283 8.283 0 18.5 0S37 8.283 37 18.5C37 28.718 28.717 37 18.5 37S0 28.719 0 18.5z">
-                        </path>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M20.913 18.5l5.227-5.227a1.707 1.707 0 0 0-2.411-2.413l-5.23 5.227-5.227-5.227a1.705 1.705 0 1 0-2.411 2.413l5.227 5.228-5.227 5.227a1.704 1.704 0 0 0 1.206 2.913 1.7 1.7 0 0 0 1.205-.5l5.228-5.227 5.229 5.227c.333.333.768.5 1.205.5a1.707 1.707 0 0 0 1.207-2.913l-5.228-5.227z"
-                            fill="#fff"></path>
-                    </svg>
+    <div class="popup_back">
+        <div class="popup">
+            <div class="basket_main">
+                <h2>Кошик</h2>
+                <svg class="basket_close" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 18.5C0 8.283 8.283 0 18.5 0S37 8.283 37 18.5C37 28.718 28.717 37 18.5 37S0 28.719 0 18.5z">
+                    </path>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20.913 18.5l5.227-5.227a1.707 1.707 0 0 0-2.411-2.413l-5.23 5.227-5.227-5.227a1.705 1.705 0 1 0-2.411 2.413l5.227 5.228-5.227 5.227a1.704 1.704 0 0 0 1.206 2.913 1.7 1.7 0 0 0 1.205-.5l5.228-5.227 5.229 5.227c.333.333.768.5 1.205.5a1.707 1.707 0 0 0 1.207-2.913l-5.228-5.227z"
+                        fill="#fff"></path>
+                </svg>
+            </div>
+            <div class="basket_rows">
+                <div class="basket_empty">
+                    <p>Кошик пустий !</p>
                 </div>
-                <div class="basket_rows">
-                    <div class="basket_empty">
-                        <p>Кошик пустий !</p>
+                <div class="basket_row" id="basket_row_example">
+                    <div class="row_close_block">
+                        <svg class="row_close" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0 18.5C0 8.283 8.283 0 18.5 0S37 8.283 37 18.5C37 28.718 28.717 37 18.5 37S0 28.719 0 18.5z">
+                            </path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.913 18.5l5.227-5.227a1.707 1.707 0 0 0-2.411-2.413l-5.23 5.227-5.227-5.227a1.705 1.705 0 1 0-2.411 2.413l5.227 5.228-5.227 5.227a1.704 1.704 0 0 0 1.206 2.913 1.7 1.7 0 0 0 1.205-.5l5.228-5.227 5.229 5.227c.333.333.768.5 1.205.5a1.707 1.707 0 0 0 1.207-2.913l-5.228-5.227z"
+                                fill="#fff"></path>
+                        </svg>
                     </div>
-                    <div class="basket_row" id="basket_row_example">
-                        <div class="row_close_block">
-                            <svg class="row_close" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0 18.5C0 8.283 8.283 0 18.5 0S37 8.283 37 18.5C37 28.718 28.717 37 18.5 37S0 28.719 0 18.5z">
-                                </path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M20.913 18.5l5.227-5.227a1.707 1.707 0 0 0-2.411-2.413l-5.23 5.227-5.227-5.227a1.705 1.705 0 1 0-2.411 2.413l5.227 5.228-5.227 5.227a1.704 1.704 0 0 0 1.206 2.913 1.7 1.7 0 0 0 1.205-.5l5.228-5.227 5.229 5.227c.333.333.768.5 1.205.5a1.707 1.707 0 0 0 1.207-2.913l-5.228-5.227z"
-                                    fill="#fff"></path>
-                            </svg>
-                        </div>
-                        <img class="basket_img" src="images/hyac/item2.jpg">
-                        <div class="basket_description">
-                            <div class="basket_name">Name</div>
-                            <div class="basket_cost">
-                                <div class="basket_item_cost">
-                                    <span class="basket_item_cost_number">100</span>
-                                    <span>грн</span>
+                    <img class="basket_img" src="../docs/images/hyac/item2.jpg">
+                    <div class="basket_description">
+                        <div class="basket_name">Name</div>
+                        <div class="basket_cost">
+                            <div class="basket_item_cost">
+                                <span class="basket_item_cost_number">100</span>
+                                <span>грн</span>
+                            </div>
+                            <div class="basket_amount">
+                                <div class="basket_minus_block">
+                                    <svg class="basket_inc_btn" viewBox="0 0 19 19" id="minus"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M.806 8.75h17.48c.56 0 .713.336.713.75s-.197.75-.72.75H.81c-.668 0-.81-.336-.81-.75s.142-.75.806-.75z">
+                                        </path>
+                                    </svg>
                                 </div>
-                                <div class="basket_amount">
-                                    <div class="basket_minus_block">
-                                        <svg class="basket_inc_btn" viewBox="0 0 19 19" id="minus"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M.806 8.75h17.48c.56 0 .713.336.713.75s-.197.75-.72.75H.81c-.668 0-.81-.336-.81-.75s.142-.75.806-.75z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <div class="basket_amount_number">1</div>
-                                    <div class="basket_plus_block">
-                                        <svg class="basket_inc_btn" viewBox="0 0 19 19"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10 9h8.5a.5.5 0 0 1 0 1H10v8.5a.5.5 0 1 1-1 0V10H.5a.5.5 0 1 1 0-1H9V.5a.5.5 0 0 1 1 0V9z"
-                                                fill-rule="evenodd" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </div>
+                                <div class="basket_amount_number">1</div>
+                                <div class="basket_plus_block">
+                                    <svg class="basket_inc_btn" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10 9h8.5a.5.5 0 0 1 0 1H10v8.5a.5.5 0 1 1-1 0V10H.5a.5.5 0 1 1 0-1H9V.5a.5.5 0 0 1 1 0V9z"
+                                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                                    </svg>
                                 </div>
-                                <div class="basket_sum">
-                                    <span class="sum_number">0</span>
-                                    <span>грн</span>
-                                </div>
+                            </div>
+                            <div class="basket_sum">
+                                <span class="sum_number">0</span>
+                                <span>грн</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="total_sum_block">
-                    <p>Загальна сума:</p>
-                    <div class="total_sum">
-                        <div>
-                            <span class="total_sum_number">0</span>
-                            <span>грн</span>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </header>
-    <div class="content_space">
-        <h3 class="category-name">Гіацинти</h3>
-        <div class="section short_section">
-            <div class="item">
-                <img class="item-img" src="images/hyac/item1.jpg" alt="Item 1">
-                <div class="description">
+            <div class="total_sum_block">
+                <p>Загальна сума:</p>
+                <div class="total_sum">
                     <div>
-                        <span>Гіацинт</span>
-                        <span>Double Eros</span>
-                    </div>
-                    <div class="cost_block">
-                        <div>
-                            <span class="old_cost">70</span><span class="currency old_cost">грн</span>
-                        </div>
-                        <div>
-                            <span class="cost">50</span>
-                            <span class="currency cost">грн</span>
-                        </div>
+                        <span class="total_sum_number">0</span>
+                        <span>грн</span>
                     </div>
                 </div>
-                <button type="button">Купити</button>
             </div>
         </div>
-        <div class="style_saver">
-            <a href="category1.html">
-                <div class="show_more hover">
-                    <p class="show_more">Show more...</p>
+
+    </div>
+    <div class="middle_wrapper">
+        <div class="categories">
+            <ul class="categories_list"></ul>
+        </div>
+        <div class="content_space">
+            <!-- <h3 class="category-name">Гіацинти</h3>
+            <div class="section short_section">
+                <div class="item">
+                    <img class="item-img" src="../docs/images/hyac/item1.jpg" alt="Item 1">
+                    <div class="description">
+                        <div>
+                            <span>Гіацинт</span>
+                            <span>Double Eros</span>
+                        </div>
+                        <div class="cost_block">
+                            <div>
+                                <span class="old_cost">70</span><span class="currency old_cost">грн</span>
+                            </div>
+                            <div>
+                                <span class="cost">50</span>
+                                <span class="currency cost">грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button">Купити</button>
                 </div>
-            </a>
+                
+            </div>
+            <div class="style_saver">
+                <a href="category1.html">
+                    <div class="show_more hover">
+                        <p class="show_more">Show more...</p>
+                    </div>
+                </a>
+            </div>
+    
+    
+            <h3 class="category-name">Сальвії</h3>
+            <div class="section short_section">
+                
+                <div class="item">
+                    <img class="item-img" src="../docs/images/salvia/item5.jpg" alt="Item 5">
+                    <div class="description">
+                        <div>
+                            <span>Сальвія</span>
+                            <span>Schneehugel</span>
+                        </div>
+                        <div class="cost_block">
+                            <div>
+                                <span class="old_cost">170</span><span class="currency old_cost">грн</span>
+                            </div>
+                            <div>
+                                <span class="cost">140</span>
+                                <span class="currency cost">грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button">Купити</button>
+                </div>
+            </div>
+            <div class="style_saver">
+                <a href="category2.html">
+                    <div class="show_more hover">
+                        <p class="show_more">Show more...</p>
+                    </div>
+                </a>
+            </div> -->
         </div>
     </div>
-        <footer>
-            <p class="comunication">Комонов Кирило</p>
-            <a href="https://web.telegram.org/#/im?p=@Komonov_Kyrylo" class="telegram_logo">
-                <img src="images/telegram-icon.png" alt="Telegram">
-            </a>
-        </footer>
-        <script src="./js/main.js"></script>
+    <div class="footer">
+        <p class="comunication">Комонов Кирило</p>
+        <a href="https://web.telegram.org/#/im?p=@Komonov_Kyrylo" class="telegram_logo">
+            <img src="../docs/images/telegram-icon.png" alt="Telegram">
+        </a>
+    </div>
+<!-- <script type="text/javascript" src="js/main.js"></script> -->
 </body>
 
 </html>
