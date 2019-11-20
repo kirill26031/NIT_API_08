@@ -1,20 +1,14 @@
 const path = require('path');
-<<<<<<< Updated upstream
- 
-=======
-var $ = require("jquery");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
->>>>>>> Stashed changes
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'docs'),
         filename: 'js/main.js',
     },
-<<<<<<< Updated upstream
-=======
+
 	devServer: {
       inline: true,
       port: 8001
@@ -49,5 +43,4 @@ module.exports = {
         filename: "css/[name].css",
     })
    ]
->>>>>>> Stashed changes
 };
