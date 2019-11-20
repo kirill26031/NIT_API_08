@@ -3,9 +3,11 @@ import $ from "jquery";
 
 
 // Start of old code 
-var header_hidden = 0;
+function scroll_settings(){
+  var header_hidden = 0;
 window.addEventListener('scroll', function () {
   var header_top = document.getElementsByClassName('header_top')[0];
+  let old_height = parseInt($('.header').css('height'));
   if (this.pageYOffset > 50 && header_hidden == 0) {
     header_top.classList.add("scroll");
     header_hidden = 1;
@@ -14,7 +16,11 @@ window.addEventListener('scroll', function () {
     header_top.classList.remove("scroll");
     header_hidden = 0;
   }
+  let diff_height = parseInt($('.header').css('height')) - old_height;
+  $('.categories_list')[0].style.marginTop=
+  parseInt($('.categories_list').css('margin-top'))+diff_height+"px";
 });
+}
 var header_menu_btn = document.querySelector('.menu_icon');
 var menu = document.querySelector('.menu');
 var middle_wrapper = $(".middle_wrapper");
@@ -144,6 +150,7 @@ function basket_remove(copy_row) {
 let categories_json;
 
 window.onload=function(){
+  scroll_settings();
   show_category("all");
   $('.menu_categories').on('click', function(event){
     $(".categories").toggleClass('show_categories');
@@ -155,6 +162,7 @@ function read_categories(categories_json) {
     dataType: "json",
     url: "https://nit.tron.net.ua/api/category/list",
     success: function (data) {
+
       let temp_elem ='<li class="category"><button id="category_all">All</button></li>';
       $(".categories_list").append(temp_elem);
       $("#category_all").on("click", function(event){
