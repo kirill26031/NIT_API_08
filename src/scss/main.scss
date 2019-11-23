@@ -79,15 +79,12 @@ a {
     margin-top: 0;
     margin-bottom: 0;
 }
-.header_basket {
+.header_cart {
     height: 40px;
     width: 40px;
     cursor: pointer;
 }
-.hover:hover,button:hover {
-    background-color: #65a75c;
-}
-.basket_counter {
+.cart_counter {
     position: fixed;
     display: none;
     width: 20px;
@@ -95,12 +92,12 @@ a {
     justify-content: center;
     transform: translate(20px, 0px);
 }
-.basket_counter_number {
+.cart_counter_number {
     font-size:18px;
     color:white;
     position: fixed;
 }
-.basket_counter>svg{
+.cart_counter>svg{
     width: 20px;
     height: 20px;
     fill: red;
@@ -131,26 +128,26 @@ a {
     display: flex;
     flex-direction: column;
 }
-.basket_main {
+.cart_main {
     display: flex;
     justify-content: space-between;
     margin-bottom:10px;
 }
-.basket_main h2{
+.cart_main h2{
     margin: 0;
 }
-.basket_close {
+.cart_close {
     width:30px;
     height: 30px;
     fill: #d2d2d2;
     cursor: pointer;
 }
-.basket_rows {
+.cart_rows {
     /* padding-top: 40px;
     padding-bottom: 33px; */
     overflow-y: auto;
 }
-.basket_row {
+.cart_row {
     border: 1px solid lightgray;
     border-radius: 5px;
     height: auto;
@@ -169,36 +166,36 @@ a {
     height: 22px;
     fill: #d2d2d2;
 }
-.basket_img {
+.cart_img {
     width: 75px;
     height: 75px;
 }
-.basket_description {
+.cart_description {
     width:100%;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     padding:5px;
 }
-.basket_cost {
+.cart_cost {
     display:flex;
     justify-content: space-between;
 }
-.basket_amount {
+.cart_amount {
     display:flex;
     justify-content: space-between;
 }
-.basket_amount>div {
+.cart_amount>div {
     width: 40px;
     text-align: center;
 }
-.basket_inc_btn{
+.cart_inc_btn{
     fill: #a6a5a5;
     width:19px;
     height: 19px;
     cursor: pointer;
 }
-.basket_empty {
+.cart_empty {
     font-size: 20px;
 }
 .total_sum_block {
@@ -216,7 +213,7 @@ a {
     justify-content: space-around;
     font-size: 20px;
 }
-#basket_row_example {
+#cart_row_example {
     display: none;
 }
 
@@ -230,6 +227,7 @@ $categories_width: 30vw;
 .categories {
     border-right: 2px solid lightgray;
     flex-shrink: 0;
+    flex-grow: 0;
     width: $categories_width;
     margin-left: -$categories_width;
     transition: 0.5s margin-left ease;
@@ -295,7 +293,8 @@ $categories_width: 30vw;
     }
 }
 .content_space {
-    width: 100%;
+    flex-grow: 1;
+    text-align: center;
 }
 .section {
     text-align: center;
@@ -309,33 +308,33 @@ $categories_width: 30vw;
     text-align: center;
 }
 .item {
-    background-color: beige;
-    border-radius: 40px;
+    border-radius: 10px;
     overflow: hidden;
     width: 180px;
-    height: 270px;
     display:inline-block;
     margin:2%;
-    margin-top:10px;
-    margin-bottom:10px;
     vertical-align: middle;
 }
 .item:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
      0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.item-img{
+.item_img img{
+    transition: width ease 1s, height ease 1s, margin ease 1s;
     width: 180px;
     height: 180px;
+    object-fit: contain;
 }
-.item-img:hover{
-    transition: width ease 1s, height ease 1s, margin-top ease 1s;
-    margin-top:-20px;
-    width: 200px;
-    height: 200px
+.item_img{
+    overflow: hidden;
+}
+.item_img img:hover{
+    margin: -20px;
+    width: 220px;
+    height: 220px
 }
 .item [type="button"]{
-    width: 90%;
+    width: 100%;
     height:34px;
     border-radius: 10px;
     color: white;
@@ -350,37 +349,39 @@ outline: none;
 .description {
     display: flex;
     width: 100%;
+    height: 5.55em;
     flex-direction: column;
-    margin-top: -5px;
+    justify-content: space-between;
+}
+.item_name {
+    text-align: center;
+    font-size: 1em;
+    overflow: hidden;
 }
 
-.old_cost {
-    text-decoration: line-through;
-    font-size: 20px;
-}
-.cost {
-    color: rgb(255, 102, 0);
-    font-size: 25px;
-}
 .cost_block {
+    // flex-grow: 1;
+    flex-shrink: 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-.show_more {
-    text-align: center;
-    width: 100px;
-    height: 20px;
-    float: right;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin:0px;
-    bottom: 0px;
+.old_cost_div{
+    flex-grow: 1;
 }
-.style_saver{
-    width: 100%;
-    height: 22px;
+.cost_div{
+    flex-grow: 0;
 }
+.old_cost {
+    text-decoration: line-through;
+    font-size: 1.25em;
+}
+.cost {
+    color: rgb(255, 102, 0);
+    font-size: 1.5em;
+}
+
 .footer {
     border-radius: 20px;
     background-color: #65a75c;
@@ -437,7 +438,7 @@ outline: none;
     }
 }
 @media (max-width: 450px) {
-    .basket_cost{
+    .cart_cost{
         flex-direction: column;
         align-items: center;
     }
@@ -450,4 +451,67 @@ outline: none;
         content: "Придбати товари ви можете на нашому сайті";
         display: block;
     }
+}
+
+.item_full{
+    padding: 20px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.go_back{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.go_back div{
+    margin: 0 20px 0 10px;
+    width: 40px;
+    height: 40px;
+}
+.go_back svg{
+    width: 40px;
+    height: 40px;
+}
+.item_full_img_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.item_full_img_box img{
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+.item_full_name{
+    width: 90%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.item_full_cost_block{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin: 20px;
+}
+.item_full [type="button"]{
+    width: 100%;
+    height:60px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(39, 163, 7);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+.item_full [type="button"]:focus {
+outline: none;
+}
+.item_full_cost_block .cost{
+    font-size: 2em;
+}
+.item_full_cost_block .old_cost{
+    font-size: 1.5em;
 }
